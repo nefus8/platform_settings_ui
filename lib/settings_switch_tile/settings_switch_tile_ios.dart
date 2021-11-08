@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class SettingsSwitchTileIos extends StatelessWidget {
+class SettingsSwitchTileIos extends StatefulWidget {
   final String title;
   final String subTitle;
   final bool value;
@@ -25,20 +25,25 @@ class SettingsSwitchTileIos extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  State<SettingsSwitchTileIos> createState() => _SettingsSwitchTileIosState();
+}
+
+class _SettingsSwitchTileIosState extends State<SettingsSwitchTileIos> {
+  @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
         ListTile(
           dense: true,
-          title: Text(title, textAlign: TextAlign.start,),
-          leading: icon,
+          title: Text(widget.title, textAlign: TextAlign.start,),
+          leading: widget.icon,
           trailing: CupertinoSwitch(
-            onChanged: (bool value) {onChanged(value);},
-            value: value,
-            activeColor: activeColor,
-            thumbColor: thumbColor,
-            trackColor: trackColor,
+            onChanged: (bool value) {widget.onChanged(value);},
+            value: widget.value,
+            activeColor: widget.activeColor,
+            thumbColor: widget.thumbColor,
+            trackColor: widget.trackColor,
           ),
         ),
         const Divider(indent: 50, height: 0,),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class SettingsSwitchTileAndroid extends StatelessWidget {
+class SettingsSwitchTileAndroid extends StatefulWidget {
   final String title;
   final String subTitle;
   final bool value;
@@ -23,17 +23,22 @@ class SettingsSwitchTileAndroid extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  State<SettingsSwitchTileAndroid> createState() => _SettingsSwitchTileAndroidState();
+}
+
+class _SettingsSwitchTileAndroidState extends State<SettingsSwitchTileAndroid> {
+  @override
   Widget build(BuildContext context) {
     return ListTile(
       dense: true,
-      title: Text(title, textAlign: TextAlign.start,),
-      leading: icon,
+      title: Text(widget.title, textAlign: TextAlign.start,),
+      leading: widget.icon,
       trailing: Switch(
-        onChanged: (bool value) {onChanged(value);},
-        value: value,
-        activeColor: activeColor,
-        thumbColor: thumbColor,
-        trackColor: trackColor,
+        onChanged: (bool value) {widget.onChanged(value);},
+        value: widget.value,
+        activeColor: widget.activeColor,
+        thumbColor: widget.thumbColor,
+        trackColor: widget.trackColor,
       ),
     );
   }

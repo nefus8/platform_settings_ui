@@ -1,3 +1,7 @@
+## 0.0.2 - 09.11.2021
+
+* Added slider settings
+
 ## 0.0.1 - 08.11.2021
 
 First version of the package

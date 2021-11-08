@@ -6,7 +6,8 @@ iOS 15 Settings design and Android 11 Settings design.
 
 This plugins can make at the moment two types of settings, switch settings and "classic" settings.
 
-![iOS example](assets/ios.png) ![Android example](assets/android.png)
+<img src="assets/ios.png" alt="iOS example" height="400"/>
+<img src="assets/android.png" alt="Android example" height="400"/>
 
 ## Getting started
 
@@ -21,7 +22,6 @@ Example in the `/example` folder.
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:platform_settings_ui/platform_settings_ui.dart';
-import 'package:platform_settings_ui/settings_tile/settings_switch_tile.dart';
 
 void main() {
   runApp(MyApp());
@@ -86,6 +86,15 @@ class _PlatformUiExampleState extends State<PlatformUiExample> {
                   value: true,
                   onChanged: (value) => print(value),
                   activeColor: Colors.red,
+                ),
+                SettingsCursorTile(
+                  onChanged: (value) => print(value),
+                  value: 0.2,
+                  leadingIcon: Icon(Icons.volume_mute_rounded),
+                  trailingIcon: Icon(Icons.volume_up),
+                  title: "Volume",
+                  titleAndroidOnly: true,
+                  trailingIconIosOnly: true,
                 )
               ]
           )
