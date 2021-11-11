@@ -1,3 +1,16 @@
+## 0.1.0 - 11.11.2021
+
+Breaking changes :
+* You now need and EditType in SettingsTile, you can choose between `uneditable`, `custom`, `text` and `list`.
+
+Added :
+* Text and List settings.
+
+
+## 0.0.3 - 09.11.2021
+
+* Solving bug, image not showin in md
+
 ## 0.0.2 - 09.11.2021
 
 * Added slider settings

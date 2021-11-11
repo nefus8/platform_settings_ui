@@ -10,20 +10,21 @@ class SettingsSwitchTileAndroid extends StatefulWidget {
   final MaterialStateProperty<Color?>? thumbColor;
   final MaterialStateProperty<Color?>? trackColor;
 
-  const SettingsSwitchTileAndroid({
-    Key? key,
-    required this.title,
-    required this.onChanged,
-    required this.value,
-    this.subTitle = "",
-    this.icon,
-    this.activeColor,
-    this.thumbColor,
-    this.trackColor
-  }) : super(key: key);
+  const SettingsSwitchTileAndroid(
+      {Key? key,
+      required this.title,
+      required this.onChanged,
+      required this.value,
+      this.subTitle = "",
+      this.icon,
+      this.activeColor,
+      this.thumbColor,
+      this.trackColor})
+      : super(key: key);
 
   @override
-  State<SettingsSwitchTileAndroid> createState() => _SettingsSwitchTileAndroidState();
+  State<SettingsSwitchTileAndroid> createState() =>
+      _SettingsSwitchTileAndroidState();
 }
 
 class _SettingsSwitchTileAndroidState extends State<SettingsSwitchTileAndroid> {
@@ -31,10 +32,15 @@ class _SettingsSwitchTileAndroidState extends State<SettingsSwitchTileAndroid> {
   Widget build(BuildContext context) {
     return ListTile(
       dense: true,
-      title: Text(widget.title, textAlign: TextAlign.start,),
+      title: Text(
+        widget.title,
+        textAlign: TextAlign.start,
+      ),
       leading: widget.icon,
       trailing: Switch(
-        onChanged: (bool value) {widget.onChanged(value);},
+        onChanged: (bool value) {
+          widget.onChanged(value);
+        },
         value: widget.value,
         activeColor: widget.activeColor,
         thumbColor: widget.thumbColor,

@@ -10,18 +10,18 @@ class SettingsSliderTileIos extends StatefulWidget {
   Color? activeColor;
   int? division;
 
-  SettingsSliderTileIos({
-    required this.onChanged,
-    required this.value,
-    this.title,
-    this.leadingIcon,
-    this.trailingIcon,
-    this.max = 1,
-    this.min = 0,
-    this.activeColor,
-    this.division,
-    Key? key
-  }) : super(key: key);
+  SettingsSliderTileIos(
+      {required this.onChanged,
+      required this.value,
+      this.title,
+      this.leadingIcon,
+      this.trailingIcon,
+      this.max = 1,
+      this.min = 0,
+      this.activeColor,
+      this.division,
+      Key? key})
+      : super(key: key);
 
   @override
   State<SettingsSliderTileIos> createState() => _SettingsSliderTileIosState();
@@ -36,17 +36,42 @@ class _SettingsSliderTileIosState extends State<SettingsSliderTileIos> {
         ListTile(
           title: widget.title == null ? getSlider() : Text(widget.title!),
           subtitle: widget.title == null ? null : getSlider(),
-          leading: widget.leadingIcon == null ? null : (widget.title == null ? widget.leadingIcon! : Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [widget.leadingIcon!, widget.title == null ? const SizedBox.shrink() : const SizedBox(height: 5,)],
-          )),
+          leading: widget.leadingIcon == null
+              ? null
+              : (widget.title == null
+                  ? widget.leadingIcon!
+                  : Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        widget.leadingIcon!,
+                        widget.title == null
+                            ? const SizedBox.shrink()
+                            : const SizedBox(
+                                height: 5,
+                              )
+                      ],
+                    )),
           dense: true,
-          trailing: widget.trailingIcon == null ? null : (widget.title == null ? widget.trailingIcon! : Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [widget.trailingIcon!, widget.title == null ? const SizedBox.shrink() : const SizedBox(height: 5,)],
-          )),
+          trailing: widget.trailingIcon == null
+              ? null
+              : (widget.title == null
+                  ? widget.trailingIcon!
+                  : Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        widget.trailingIcon!,
+                        widget.title == null
+                            ? const SizedBox.shrink()
+                            : const SizedBox(
+                                height: 5,
+                              )
+                      ],
+                    )),
         ),
-        const Divider(indent: 50, height: 0,),
+        const Divider(
+          indent: 50,
+          height: 0,
+        ),
       ],
     );
   }

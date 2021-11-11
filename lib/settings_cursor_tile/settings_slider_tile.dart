@@ -14,20 +14,20 @@ class SettingsSliderTile extends StatefulWidget {
   int? division;
   bool titleAndroidOnly, trailingIconIosOnly;
 
-  SettingsSliderTile({
-    required this.onChanged,
-    required this.value,
-    this.title,
-    this.leadingIcon,
-    this.trailingIcon,
-    this.max = 1,
-    this.min = 0,
-    this.activeColor,
-    this.division,
-    this.titleAndroidOnly = true,
-    this.trailingIconIosOnly = true,
-    Key? key
-  }) : super(key: key);
+  SettingsSliderTile(
+      {required this.onChanged,
+      required this.value,
+      this.title,
+      this.leadingIcon,
+      this.trailingIcon,
+      this.max = 1,
+      this.min = 0,
+      this.activeColor,
+      this.division,
+      this.titleAndroidOnly = true,
+      this.trailingIconIosOnly = true,
+      Key? key})
+      : super(key: key);
 
   @override
   State<SettingsSliderTile> createState() => _SettingsSliderTileState();

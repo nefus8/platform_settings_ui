@@ -1,6 +1,6 @@
 name: platform_settings_ui
 description: Easily create settings pages with iOS 15 and Android 11 norms.
-version: 0.0.2
+version: 0.1.0
 homepage: https://github.com/nefus8/platform_settings_ui.git
 
 environment:
@@ -10,6 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  more_widgets: ^3.0.2
 
 dev_dependencies:
   flutter_test:

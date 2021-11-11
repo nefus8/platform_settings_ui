@@ -88,6 +88,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.7.0"
+  more_widgets:
+    dependency: "direct dev"
+    description:
+      name: more_widgets
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.2"
   path:
     dependency: transitive
     description:
