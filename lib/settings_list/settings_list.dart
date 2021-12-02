@@ -20,7 +20,7 @@ class SettingsList extends StatelessWidget {
       return Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        color: const Color(0xFFEFEFF4),
+        color: Theme.of(context).brightness == Brightness.light ? Color(0xFFEFEFF4) : Color(0xFF000000),
         child: CupertinoScrollbar(
           controller: scrollController,
           child: ListView(
@@ -34,7 +34,7 @@ class SettingsList extends StatelessWidget {
       return Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        color: Colors.white,
+        color: Theme.of(context).brightness == Brightness.light ? Colors.white : Color(0xFF000000),
         child: Scrollbar(
           controller: scrollController,
           child: ListView(

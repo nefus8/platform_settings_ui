@@ -21,7 +21,7 @@ class SettingsSectionAndroid extends StatelessWidget {
                 padding:
                     const EdgeInsets.only(left: 12.0, right: 12.0, top: 10),
                 child: Padding(
-                  padding: EdgeInsets.only(left: 60.0, top: 10.0),
+                  padding: const EdgeInsets.only(left: 60.0, top: 10.0),
                   child: Text(
                     title!.toUpperCase(),
                     style: TextStyle(color: Colors.grey.shade600, fontSize: 10),

@@ -37,6 +37,8 @@ class SettingsTileAndroid extends StatelessWidget {
       title: Text(
         title,
         textAlign: TextAlign.start,
+        style: TextStyle(
+            color: Theme.of(context).brightness == Brightness.light ? null : Colors.white),
       ),
       leading: SizedBox(height: double.infinity, child: icon),
       subtitle: Text(

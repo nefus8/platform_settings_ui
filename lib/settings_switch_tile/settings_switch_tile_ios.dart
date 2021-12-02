@@ -37,7 +37,8 @@ class _SettingsSwitchTileIosState extends State<SettingsSwitchTileIos> {
           dense: true,
           title: Text(
             widget.title,
-            textAlign: TextAlign.start,
+            textAlign: TextAlign.start, style: TextStyle(
+                  color: Theme.of(context).brightness == Brightness.light ? null : Colors.white)
           ),
           leading: widget.icon,
           trailing: CupertinoSwitch(

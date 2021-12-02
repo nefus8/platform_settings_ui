@@ -64,7 +64,7 @@ class _TextEditTypeState extends State<_TextEditType> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      backgroundColor: const Color(0xFFEFEFF4),
+      backgroundColor: Theme.of(context).brightness == Brightness.light ? const Color(0xFFEFEFF4) : Color(0xFF000000),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
         child: CupertinoTextField(
@@ -79,6 +79,8 @@ class _TextEditTypeState extends State<_TextEditType> {
               }
             });
           },
+          style: TextStyle(color: Theme.of(context).brightness == Brightness.light ? null : Colors.white),
+          cursorColor: Theme.of(context).brightness == Brightness.light ? null : Colors.white,
           placeholder: widget.subTitle,
           suffix: IconButton(
             splashColor: Colors.transparent,
@@ -96,7 +98,7 @@ class _TextEditTypeState extends State<_TextEditType> {
           ),
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
           decoration: BoxDecoration(
-              color: Colors.white, borderRadius: BorderRadius.circular(10)),
+              color: Theme.of(context).brightness == Brightness.light ? Colors.white : const Color(0xFF1C1C1E), borderRadius: BorderRadius.circular(10)),
         ),
       ),
     );

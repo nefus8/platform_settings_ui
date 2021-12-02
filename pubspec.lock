@@ -89,11 +89,11 @@ packages:
     source: hosted
     version: "1.7.0"
   more_widgets:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
-      name: more_widgets
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "/Users/simonbraillard/development/flutter_packages/more_widgets"
+      relative: false
+    source: path
     version: "3.0.2"
   path:
     dependency: transitive

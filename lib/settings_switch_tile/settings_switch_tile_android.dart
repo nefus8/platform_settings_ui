@@ -35,6 +35,8 @@ class _SettingsSwitchTileAndroidState extends State<SettingsSwitchTileAndroid> {
       title: Text(
         widget.title,
         textAlign: TextAlign.start,
+        style: TextStyle(
+            color: Theme.of(context).brightness == Brightness.light ? null : Colors.white),
       ),
       leading: widget.icon,
       trailing: Switch(

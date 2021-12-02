@@ -34,7 +34,8 @@ class _SettingsSliderTileIosState extends State<SettingsSliderTileIos> {
       mainAxisSize: MainAxisSize.min,
       children: [
         ListTile(
-          title: widget.title == null ? getSlider() : Text(widget.title!),
+          title: widget.title == null ? getSlider() : Text(widget.title!, style: TextStyle(
+    color: Theme.of(context).brightness == Brightness.light ? null : Colors.white)),
           subtitle: widget.title == null ? null : getSlider(),
           leading: widget.leadingIcon == null
               ? null

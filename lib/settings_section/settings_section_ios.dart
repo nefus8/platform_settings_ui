@@ -32,7 +32,7 @@ class SettingsSectionIos extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(10.0),
             child: Material(
-              color: Colors.white,
+              color: Theme.of(context).brightness == Brightness.light ? Colors.white : Color(0xFF1C1C1E),
               borderRadius: BorderRadius.circular(10.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,

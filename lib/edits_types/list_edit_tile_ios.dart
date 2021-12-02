@@ -26,7 +26,7 @@ class _ListEditTileIosState<T> extends State<ListEditTileIos<T>> {
       mainAxisSize: MainAxisSize.min,
       children: [
         ListTile(
-          onTap: () => setState(() => widget.onChanged(widget.value)),
+          onTap: () => widget.onChanged(widget.value),
           title: widget.title,
           leading: isSelected
               ? const Icon(Icons.check, size: 20, color: Colors.lightBlue)

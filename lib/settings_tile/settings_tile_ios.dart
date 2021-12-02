@@ -35,7 +35,8 @@ class SettingsTileIos extends StatelessWidget {
       children: [
         ListTile(
           onTap: editType == EditType.uneditable ? null : () => getFn(context),
-          title: Text(title, textAlign: TextAlign.start),
+          title: Text(title, textAlign: TextAlign.start, style: TextStyle(
+              color: Theme.of(context).brightness == Brightness.light ? null : Colors.white),),
           leading: icon,
           dense: true,
           trailing: Row(

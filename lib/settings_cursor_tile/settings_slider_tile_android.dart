@@ -31,7 +31,8 @@ class _SettingsSliderTileAndroidState extends State<SettingsSliderTileAndroid> {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: widget.title == null ? getSlider() : Text(widget.title!),
+      title: widget.title == null ? getSlider() : Text(widget.title!, style: TextStyle(
+          color: Theme.of(context).brightness == Brightness.light ? null : Colors.white),),
       subtitle: widget.title == null ? null : getSlider(),
       leading: widget.leadingIcon == null
           ? null

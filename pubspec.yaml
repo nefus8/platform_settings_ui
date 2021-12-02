@@ -10,7 +10,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  more_widgets: ^3.0.2
+  #more_widgets: ^3.0.2
+  more_widgets:
+    path: /Users/simonbraillard/development/flutter_packages/more_widgets
 
 dev_dependencies:
   flutter_test:
